@@ -1,5 +1,5 @@
 const BoletosModel = (sequelize, DataTypes) => {
-    const Boleto = sequelize.define('Lote',
+    const Boleto = sequelize.define('Boleto',
         {
             id: {
                 type: DataTypes.INTEGER,

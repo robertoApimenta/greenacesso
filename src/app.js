@@ -1,6 +1,7 @@
 const express = require('express');
 
 const loteRoutes = require('./routers/lote.router');
+const boletoRoutes = require('./routers/boleto.router');
 
 const app = express();
 app.use(express.json());
@@ -11,5 +12,6 @@ app.get('/', (_request, response) => {
 });
 
 app.use(loteRoutes);
+app.use(boletoRoutes);
 
 module.exports = app;
