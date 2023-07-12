@@ -4,6 +4,6 @@ const boletoController = require('../controller/boleto.controller');
 
 const boletoRoutes = Router();
 
-boletoRoutes.get('/boleto', boletoController.getAll);
+boletoRoutes.get('/boletos', boletoController.getAll);
 
 module.exports = boletoRoutes;
