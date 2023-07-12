@@ -5,6 +5,12 @@ const getAll = async () => {
     return result;
 };
 
+const getByFilter = async () => {
+    const result = await Boleto.findAll({ attributes: { exclude: ['criado_em'] } });
+    return result;
+};
+
 module.exports = {
     getAll,
+    getByFilter,
 };
