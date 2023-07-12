@@ -12,7 +12,7 @@ module.exports = {
       },
       nome_sacado: { type: Sequelize.STRING },
       id_lote: { type: Sequelize.INTEGER },
-      valor: { type: Sequelize.DECIMAL },
+      valor: { type: Sequelize.DECIMAL(5, 2) },
       linha_digitavel: { type: Sequelize.STRING },
       ativo: { type: Sequelize.BOOLEAN },
       criado_em: { type: Sequelize.DATE },

@@ -9,7 +9,7 @@ const BoletosModel = (sequelize, DataTypes) => {
             },
             nome_sacado: DataTypes.STRING,
             id_lote: DataTypes.INTEGER,
-            valor: DataTypes.DECIMAL,
+            valor: DataTypes.DECIMAL(5, 2),
             linha_digitavel: DataTypes.STRING,
             ativo: DataTypes.BOOLEAN,
             criado_em: DataTypes.DATE,
