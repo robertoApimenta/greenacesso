@@ -11,7 +11,7 @@ services:
     restart: always
     working_dir: /app
     volumes:
-      - ./src/:/app/src
+      - ./:/app
     depends_on:
       - db
     ports:
