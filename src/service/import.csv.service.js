@@ -3,9 +3,7 @@ const { Boleto } = require('../models/index');
 
 const insertBoletos = async (boletos) => {
     const dataInsert = await Promise.all(boletos.map(async (ele) => {
-        console.log(ele)
         const id_lote = await LotesFinanceiro.findOne({ where: { nome_unidade: ele.id_lote } })
-        //console.log(id_lote.dataValues.idLote)
         const dados = {
             nome_sacado: ele.nome_sacado,
             id_lote: id_lote.dataValues.idLote,
@@ -15,15 +13,13 @@ const insertBoletos = async (boletos) => {
             criado_em: new Date(),
         }
         return dados;
-    })
-    )
+    }),
+    );
 
     const result = await Promise.all(dataInsert.map(async (ele) => {
-        console.log(ele)
         await Boleto.create(ele);
-    }))
-    //const result = await Boleto.create(dataInsert);
-    //console.log(result);
+    }));
+    return result;
 };
 
 module.exports = {

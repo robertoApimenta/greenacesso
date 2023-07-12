@@ -14,8 +14,9 @@ const lerCsvPdf = async (req, res) => {
             ativo: true,
         }
         return dados;
-    })
-    const result = await importService.insertBoletos(boletos);
+    });
+    await importService.insertBoletos(boletos);
+    return res.status(200).json({ message: 'Boletos cadastrados' });
 };
 
 module.exports = {
