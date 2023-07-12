@@ -1,10 +1,12 @@
 const { Boleto } = require('../models/index');
 
-const getAll = async () => {
-    const result = await Boleto.findAll({ attributes: { exclude: ['criado_em'] } });
-    return result;
+const insertBoletos = async (linhas) => {
+    linhas.map(el => {
+        const boleto = el.split(';');
+        console.log(boleto[0]);
+    })
 };
 
 module.exports = {
-    getAll,
+    insertBoletos,
 };
