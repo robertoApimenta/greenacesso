@@ -6,16 +6,19 @@ module.exports = {
     await queryInterface.bulkInsert('lotes',
       [
         {
+          id: 3,
           nome: 'JOSE DA SILVA',
           ativo: true,
           criado_em: new Date()
         },
         {
+          id: 6,
           nome: 'MARCOS ROBERTO',
           ativo: true,
           criado_em: new Date()
         },
         {
+          id: 7,
           nome: 'MARCIA CARVALHO',
           ativo: true,
           criado_em: new Date()
