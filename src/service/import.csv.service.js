@@ -11,7 +11,8 @@ const insertBoletos = async (boletos) => {
             id_lote: id_lote.dataValues.idLote,
             valor: ele.valor,
             linha_digitavel: ele.linha_digitavel,
-            ativo: true,
+            ativo: ele.ativo,
+            criado_em: new Date(),
         }
         return dados;
     })
