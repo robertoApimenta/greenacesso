@@ -7,7 +7,7 @@
 # Rodando o projeto
 
     1. Clone o projeto
-    2. Rode o comando para subir os containers da aplicação (banco de dados e api) através do docker-compose
+    2. Rode o comando para subir os containers da aplicação (banco de dados e api) </br> através do docker-compose
     comando: 'docker compose up -d --build'
     OBS: certifique-se de estar com a versão atualizada do docker no seu computador
     OBS2: as portas utilizadas na aplicação são 3306 para o banco mysql e 3001 para a api, certifique-se que as mesmas não estão sendo utilizadas
