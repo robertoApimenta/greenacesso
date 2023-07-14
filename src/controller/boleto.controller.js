@@ -8,13 +8,14 @@ const getAll = async (req, res) => {
     }
     const { relatorio } = req.query;
     if (relatorio === '1') {
-        const boletos = await boletoService.getAll();
-        const base64 = JSON.stringify(boletos).toString("base64")
-        return res.status(200).json(base64);
+
+        const base64 = await boletoService.createPdf();
+
+        return res.status(200).json({ base64 });
     }
 
     const boletos = await boletoService.getAll();
-    return res.status(200).json(boletos);
+    return res.status(200).json({ boletos: boletos });
 };
 
 module.exports = {
